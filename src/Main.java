@@ -16,7 +16,7 @@ public class Main {
         String path = currentDir + "\\Resources\\chromedriver.exe";
         System.out.println(path);
         System.setProperty("webdriver.chrome.driver",path);
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();echo "# Automation" >> README.md
 
         Map<String, Object> prefs = new HashMap<String, Object>();
         //SET CHROME OPTIONS
