@@ -25,7 +25,7 @@ public class Main {
         prefs.put("profile.default_content_setting_values.notifications", 2);
         options.setExperimentalOption("prefs", prefs);
         driver = new ChromeDriver(options);
-        driver.get("https://chaldal.com");
+        driver.get("https://chaldal.com");// Absolute XPath for Chaldal
         Thread.sleep(4000);
         driver.manage().window().maximize();
         Thread.sleep(4000);
@@ -35,13 +35,41 @@ public class Main {
 //        Thread.sleep(3000);
           driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("egg");
           Thread.sleep(4000);
+          driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);
+          Thread.sleep(4000);
+          driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section/p")).click();//1click
+          Thread.sleep(4000);
+        //driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/div/span[2]")).click();//2click
+        //Thread.sleep(400);
+          for(int i=0;i<4;i++) {
+              driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();//+button
+        }
+          Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Salt");
+        Thread.sleep(4000);
         driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);
         Thread.sleep(4000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section/p")).click();//1click
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[2]/div[2]/div[1]/div/section")).click();
         Thread.sleep(4000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/div/span[2]")).click();//2click
+        for(int i=0; i<2; i++){
+            driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[2]/div[2]/div[1]/div/div[2]/button[2]")).click();//
+        }
         Thread.sleep(4000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/div[4]/button")).click();//sign in page
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div/div/div[1]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Potato");
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[2]/div[2]/div[1]/div/section")).click();
+        Thread.sleep(4000);
+        for (int i=0; i<4; i++){
+            driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[2]/div[2]/div[1]/div/div[2]/button[2]")).click();
+        }
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/div[4]/button")).click();
         Thread.sleep(400);
         driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/div/div[2]/div/button")).click();
         Thread.sleep(4000);
